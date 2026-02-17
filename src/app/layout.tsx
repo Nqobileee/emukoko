@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -9,8 +11,36 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Emukoko Innovations",
-  description: "Revolutionizing beekeeping with smart IoT sensors and community-driven insights.",
+  title: {
+    default: "Emukoko Innovations | Smart Beekeeping Platform",
+    template: "%s | Emukoko Innovations",
+  },
+  description:
+    "Revolutionizing beekeeping with smart IoT sensors, AI diagnostics, and community-driven insights. Empowering rural beekeepers across Zimbabwe.",
+  keywords: [
+    "smart beekeeping",
+    "IoT sensors",
+    "AI diagnostics",
+    "honey marketplace",
+    "Zimbabwe beekeeping",
+    "Emukoko",
+  ],
+  openGraph: {
+    title: "Emukoko Innovations | Smart Beekeeping Platform",
+    description:
+      "Revolutionizing beekeeping with smart IoT sensors, AI diagnostics, and community-driven insights.",
+    url: "https://emukoko.vercel.app",
+    siteName: "Emukoko Innovations",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emukoko Innovations | Smart Beekeeping Platform",
+    description:
+      "Revolutionizing beekeeping with smart IoT sensors, AI diagnostics, and community-driven insights.",
+  },
+  metadataBase: new URL("https://emukoko.vercel.app"),
 };
 
 export default function RootLayout({
@@ -27,7 +57,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${spaceGrotesk.variable} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
