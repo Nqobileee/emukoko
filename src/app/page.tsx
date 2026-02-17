@@ -6,8 +6,7 @@ export default function Home() {
       <div className="fixed bottom-[10%] left-[-10%] w-[40vh] h-[40vh] bg-primary/10 rounded-full blur-[60px] pointer-events-none z-0"></div>
 
       {/* Navigation */}
-      <nav className="fixed top-4 left-4 right-4 z-50 px-5 py-3 flex items-center justify-between transition-all duration-300">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent rounded-full blur-xl -z-10 pointer-events-none"></div>
+      <nav className="fixed top-4 left-4 right-4 z-50 px-5 py-3 flex items-center justify-between transition-all duration-300 bg-white/40 backdrop-blur-md border border-white/30 rounded-2xl shadow-glass">
         <div className="flex items-center gap-2">
           <div className="text-primary flex items-center justify-center p-1 bg-white/40 backdrop-blur-sm border border-white/20 rounded-full shadow-glow-sm">
             <span className="material-symbols-outlined text-[24px]">hexagon</span>
