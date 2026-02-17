@@ -96,7 +96,7 @@ export default function HowItWorksPage() {
       <div className="fixed bottom-[20%] left-[-8%] w-[35vh] h-[35vh] bg-primary/8 rounded-full blur-[70px] pointer-events-none z-0" />
 
       {/* Header */}
-      <section className="relative z-10 pt-28 pb-12 sm:pt-36 sm:pb-16">
+      <section className="relative z-10 pt-24 pb-8 sm:pt-32 sm:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -115,7 +115,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Phases */}
-      <section className="relative z-10 py-12 sm:py-20">
+      <section className="relative z-10 py-10 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             {phases.map((phase, index) => {
@@ -179,7 +179,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Summary / Benefits */}
-      <section className="relative z-10 py-16 sm:py-24 bg-surface-muted/40">
+      <section className="relative z-10 py-10 sm:py-14 bg-surface-muted/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -234,7 +234,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative z-10 py-16 sm:py-24">
+      <section className="relative z-10 py-10 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
             Ready to become a partner?
