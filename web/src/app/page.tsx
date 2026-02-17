@@ -23,7 +23,7 @@ export default function HomePage() {
       <div className="fixed bottom-[10%] left-[-10%] w-[40vh] h-[40vh] bg-primary/10 rounded-full blur-[60px] pointer-events-none z-0" />
 
       {/* Hero Section */}
-      <section className="relative z-10 pt-28 pb-20 sm:pt-36 sm:pb-28">
+      <section className="relative z-10 pt-24 pb-12 sm:pt-32 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left content */}
@@ -99,9 +99,9 @@ export default function HomePage() {
       </section>
 
       {/* Features Grid */}
-      <section className="relative z-10 py-20 sm:py-28">
+      <section className="relative z-10 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex items-end justify-between mb-8">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
                 Smart Hive Ecosystem
@@ -166,7 +166,7 @@ export default function HomePage() {
       </section>
 
       {/* Hive Status Demo */}
-      <section className="relative z-10 py-20 sm:py-28">
+      <section className="relative z-10 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -258,9 +258,9 @@ export default function HomePage() {
       </section>
 
       {/* Sustainable Cycle */}
-      <section className="relative z-10 py-20 sm:py-28 bg-surface-muted/50">
+      <section className="relative z-10 py-12 sm:py-16 bg-surface-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               A Sustainable Cycle
             </h2>
@@ -294,7 +294,7 @@ export default function HomePage() {
       </section>
 
       {/* Gallery / Visual Section */}
-      <section className="relative z-10 py-20 sm:py-28">
+      <section className="relative z-10 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-10">
             The Hive Life
@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-20 sm:py-28">
+      <section className="relative z-10 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl bg-foreground overflow-hidden p-10 sm:p-16">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black opacity-90" />

@@ -32,33 +32,28 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-1">
+          {/* Desktop links + CTA */}
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={cn(
-                      "px-4 py-2 rounded-full text-sm font-medium transition-colors",
-                      isActive
-                        ? "bg-primary/15 text-foreground"
-                        : "text-text-muted hover:text-foreground hover:bg-black/[0.04]"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "px-3.5 py-2 rounded-full text-sm font-medium transition-colors",
+                    isActive
+                      ? "bg-primary/15 text-foreground"
+                      : "text-text-muted hover:text-foreground hover:bg-black/[0.04]"
+                  )}
+                >
+                  {link.label}
+                </Link>
               );
             })}
-          </ul>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center h-10 px-5 rounded-full bg-foreground text-white text-sm font-semibold hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center h-9 px-5 ml-2 rounded-full bg-foreground text-white text-sm font-semibold hover:bg-foreground/90 transition-colors"
             >
               Get Started
             </Link>
