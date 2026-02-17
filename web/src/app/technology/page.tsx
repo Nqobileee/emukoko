@@ -32,7 +32,7 @@ export default function TechnologyPage() {
       <div className="fixed top-[30%] left-[-8%] w-[45vh] h-[45vh] bg-primary/8 rounded-full blur-[80px] pointer-events-none z-0" />
 
       {/* Header */}
-      <section className="relative z-10 pt-24 pb-8 sm:pt-32 sm:pb-12">
+      <section className="relative z-10 pt-28 pb-12 sm:pt-36 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -52,9 +52,9 @@ export default function TechnologyPage() {
       </section>
 
       {/* IoT Hardware Section */}
-      <section className="relative z-10 py-10 sm:py-14">
+      <section className="relative z-10 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-3">
               Smart Hive Sensors
             </h2>
@@ -124,9 +124,9 @@ export default function TechnologyPage() {
       </section>
 
       {/* AI & Software Section */}
-      <section className="relative z-10 py-10 sm:py-14 bg-surface-muted/40">
+      <section className="relative z-10 py-16 sm:py-24 bg-surface-muted/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-3">
               AI &amp; Software Platform
             </h2>
@@ -162,9 +162,9 @@ export default function TechnologyPage() {
       </section>
 
       {/* Platform Features */}
-      <section className="relative z-10 py-10 sm:py-14">
+      <section className="relative z-10 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-3">
               Platform Capabilities
             </h2>
@@ -195,9 +195,9 @@ export default function TechnologyPage() {
       </section>
 
       {/* Tech Stack */}
-      <section className="relative z-10 py-10 sm:py-14 bg-surface-muted/40">
+      <section className="relative z-10 py-16 sm:py-24 bg-surface-muted/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Built With
             </h2>
@@ -231,7 +231,7 @@ export default function TechnologyPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative z-10 py-10 sm:py-14">
+      <section className="relative z-10 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
             Want to see it in action?

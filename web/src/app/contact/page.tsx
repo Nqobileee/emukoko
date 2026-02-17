@@ -18,7 +18,7 @@ export default function ContactPage() {
       <div className="fixed top-[40%] right-[-6%] w-[35vh] h-[35vh] bg-primary/8 rounded-full blur-[70px] pointer-events-none z-0" />
 
       {/* Header */}
-      <section className="relative z-10 pt-24 pb-8 sm:pt-32 sm:pb-12">
+      <section className="relative z-10 pt-28 pb-12 sm:pt-36 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -37,7 +37,7 @@ export default function ContactPage() {
       </section>
 
       {/* Form + Info */}
-      <section className="relative z-10 py-8 sm:py-14">
+      <section className="relative z-10 py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Contact Form */}

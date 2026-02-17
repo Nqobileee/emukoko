@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="fixed top-[20%] right-[-5%] w-[40vh] h-[40vh] bg-primary/8 rounded-full blur-[80px] pointer-events-none z-0" />
 
       {/* Page header */}
-      <section className="relative z-10 pt-24 pb-8 sm:pt-32 sm:pb-12">
+      <section className="relative z-10 pt-28 pb-12 sm:pt-36 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
@@ -35,7 +35,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission / Vision / Values */}
-      <section className="relative z-10 py-10 sm:py-14">
+      <section className="relative z-10 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-surface p-8 rounded-2xl border border-border-light shadow-sm">
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* The Story */}
-      <section className="relative z-10 py-10 sm:py-14 bg-surface-muted/40">
+      <section className="relative z-10 py-16 sm:py-24 bg-surface-muted/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -155,9 +155,9 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="relative z-10 py-10 sm:py-14">
+      <section className="relative z-10 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               The Team
             </h2>
@@ -183,7 +183,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative z-10 py-10 sm:py-14">
+      <section className="relative z-10 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-surface rounded-3xl border border-border-light p-10 sm:p-14 text-center max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
