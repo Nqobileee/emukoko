@@ -29,7 +29,7 @@ export default function DiagnosticsPage() {
       <div>
         <h1 className="text-2xl font-bold">AI Diagnostics</h1>
         <p className="text-sm text-gray-500 mt-1">
-          AI-powered pest detection, disease alerts, and maintenance recommendations across your hive fleet.
+          AI-powered pest prediction, disease risk alerts, and maintenance recommendations across your hive fleet.
         </p>
       </div>
 
@@ -41,7 +41,7 @@ export default function DiagnosticsPage() {
           </div>
           <div>
             <h3 className="font-bold text-sm">AI Diagnostics Engine</h3>
-            <p className="text-[10px] text-gray-500">Analyzing sensor data and camera images across all hives</p>
+            <p className="text-[10px] text-gray-500">Analyzing sensor data patterns across all hives</p>
           </div>
           <div className="ml-auto flex items-center gap-1.5 px-2 py-1 bg-green-100 rounded-full">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -63,7 +63,7 @@ export default function DiagnosticsPage() {
           </div>
           <div className="bg-white/80 rounded-xl p-3 text-center">
             <p className="text-lg font-bold">92%</p>
-            <p className="text-[10px] text-gray-500">Detection Accuracy</p>
+            <p className="text-[10px] text-gray-500">Prediction Accuracy</p>
           </div>
         </div>
       </div>
@@ -145,18 +145,6 @@ export default function DiagnosticsPage() {
                   </div>
 
                   <p className="text-sm text-gray-600 mt-3">{alert.description}</p>
-
-                  {alert.imageUrl && (
-                    <div className="mt-3 w-full max-w-sm">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={alert.imageUrl}
-                        alt={`AI analysis: ${alert.title}`}
-                        className="w-full h-40 object-cover rounded-xl border border-gray-100"
-                      />
-                      <p className="text-[10px] text-gray-400 mt-1">AI-generated analysis image</p>
-                    </div>
-                  )}
 
                   <div className="mt-3 p-3 bg-blue-50 border border-blue-100 rounded-xl">
                     <div className="flex items-center gap-1.5 mb-1">

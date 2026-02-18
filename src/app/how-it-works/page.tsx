@@ -28,10 +28,10 @@ const phases = [
     icon: "psychology",
     color: "bg-purple-50 text-purple-600",
     description:
-      "Our AI continuously analyzes sensor data and camera images to detect pests, diseases, and environmental threats early. Farmers receive instant alerts and actionable recommendations via their dashboard or mobile notifications.",
+      "Our AI continuously analyzes sensor data patterns — temperature, humidity, weight, and vibration trends — to predict pest infestations and disease risks before visible symptoms appear. Farmers receive early warnings and actionable recommendations via their dashboard or mobile notifications.",
     details: [
       "24/7 automated health monitoring",
-      "Pest & disease early detection",
+      "Pest & disease early prediction",
       "Predictive yield forecasting",
       "Personalized maintenance schedules",
     ],

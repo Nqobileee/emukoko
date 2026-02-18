@@ -37,10 +37,10 @@ const sensors = [
     color: "bg-purple-50 text-purple-600",
   },
   {
-    icon: "photo_camera",
-    name: "Hive Camera",
+    icon: "analytics",
+    name: "Predictive Analytics Engine",
     description:
-      "AI-enabled camera captures entrance activity images. Computer vision models analyze images for pest detection (Varroa mites, wax moths) and colony health assessment.",
+      "Advanced ML models analyze sensor data patterns — temperature deviations, weight trends, vibration anomalies, and humidity shifts — to predict pest infestations (Varroa mites, wax moths) and disease onset before visible symptoms appear.",
     color: "bg-green-50 text-green-600",
   },
   {
@@ -55,9 +55,9 @@ const sensors = [
 const aiFeatures = [
   {
     icon: "bug_report",
-    title: "Pest & Disease Detection",
+    title: "Pest & Disease Prediction",
     description:
-      "Computer vision models trained on thousands of images identify Varroa mites, wax moths, small hive beetles, and diseases like foulbrood with over 90% accuracy.",
+      "Machine learning models analyze sensor patterns — temperature spikes, weight anomalies, vibration shifts, and humidity deviations — to predict Varroa mites, wax moths, hive beetles, and diseases like foulbrood with over 90% accuracy.",
   },
   {
     icon: "trending_up",
