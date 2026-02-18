@@ -3,18 +3,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useAuth } from "@/lib/auth-context";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/technology", label: "Technology" },
+  { href: "/marketplace", label: "Marketplace" },
+  { href: "/learning", label: "Learning" },
   { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { user } = useAuth();
 
   return (
     <>
@@ -43,6 +47,21 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          {user ? (
+            <Link
+              href="/dashboard"
+              className="ml-2 px-4 py-1.5 rounded-full text-sm font-bold bg-primary text-[#181611] hover:bg-[#dca615] transition-colors shadow-glow-sm"
+            >
+              Dashboard
+            </Link>
+          ) : (
+            <Link
+              href="/auth/login"
+              className="ml-2 px-4 py-1.5 rounded-full text-sm font-bold bg-primary text-[#181611] hover:bg-[#dca615] transition-colors shadow-glow-sm"
+            >
+              Login
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,6 +98,26 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="border-t border-gray-200 my-1" />
+            {user ? (
+              <Link
+                href="/dashboard"
+                onClick={() => setMenuOpen(false)}
+                className="px-4 py-3 rounded-xl text-base font-bold bg-primary/15 text-amber-800 flex items-center gap-3"
+              >
+                <span className="material-symbols-outlined text-[20px]">dashboard</span>
+                Dashboard
+              </Link>
+            ) : (
+              <Link
+                href="/auth/login"
+                onClick={() => setMenuOpen(false)}
+                className="px-4 py-3 rounded-xl text-base font-bold bg-primary/15 text-amber-800 flex items-center gap-3"
+              >
+                <span className="material-symbols-outlined text-[20px]">login</span>
+                Login
+              </Link>
+            )}
           </div>
         </div>
       )}
