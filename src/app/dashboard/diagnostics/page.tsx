@@ -104,16 +104,16 @@ export default function DiagnosticsPage() {
             key={alert.id}
             className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
           >
-            <div className="p-5">
-              <div className="flex items-start gap-4">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${severityIcon[alert.severity].color}`}>
+            <div className="p-4 sm:p-5">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 ${severityIcon[alert.severity].color}`}>
                   <span className="material-symbols-outlined text-[20px]">{severityIcon[alert.severity].icon}</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-start justify-between gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                     <div>
-                      <h3 className="font-bold">{alert.title}</h3>
-                      <div className="flex items-center gap-2 mt-1 text-xs text-gray-500">
+                      <h3 className="font-bold text-sm sm:text-base">{alert.title}</h3>
+                      <div className="flex items-center gap-2 mt-1 text-xs text-gray-500 flex-wrap">
                         <span className="flex items-center gap-1">
                           <span className="material-symbols-outlined text-[14px]">{typeIcon[alert.type]}</span>
                           {alert.type}
@@ -126,7 +126,7 @@ export default function DiagnosticsPage() {
                         <span>{new Date(alert.createdAt).toLocaleDateString()}</span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 shrink-0">
                       {alert.resolvedAt && (
                         <span className="flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">
                           <span className="material-symbols-outlined text-[12px]">check_circle</span>

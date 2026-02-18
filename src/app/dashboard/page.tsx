@@ -43,30 +43,32 @@ export default function DashboardPage() {
 
       {/* Alert Banner */}
       {activeAlerts.some((a) => a.severity === "critical") && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-2xl flex items-start gap-3">
-          <span className="material-symbols-outlined text-red-600 mt-0.5">warning</span>
-          <div className="flex-1">
-            <h3 className="font-bold text-sm text-red-800">Critical Alert Active</h3>
-            <p className="text-xs text-red-600 mt-0.5">
-              {activeAlerts.find((a) => a.severity === "critical")?.title} — Immediate attention required.
-            </p>
+        <div className="p-3 sm:p-4 bg-red-50 border border-red-200 rounded-2xl flex flex-col sm:flex-row items-start gap-2 sm:gap-3">
+          <div className="flex items-start gap-2 flex-1">
+            <span className="material-symbols-outlined text-red-600 mt-0.5 shrink-0">warning</span>
+            <div className="flex-1">
+              <h3 className="font-bold text-sm text-red-800">Critical Alert Active</h3>
+              <p className="text-xs text-red-600 mt-0.5">
+                {activeAlerts.find((a) => a.severity === "critical")?.title} — Immediate attention required.
+              </p>
+            </div>
           </div>
-          <Link href="/dashboard/diagnostics" className="text-xs font-bold text-red-700 hover:underline whitespace-nowrap">
+          <Link href="/dashboard/diagnostics" className="text-xs font-bold text-red-700 hover:underline whitespace-nowrap sm:ml-auto">
             View Details →
           </Link>
         </div>
       )}
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-              <span className="material-symbols-outlined text-[20px] text-amber-700">hive</span>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-sm">
+          <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+              <span className="material-symbols-outlined text-[18px] sm:text-[20px] text-amber-700">hive</span>
             </div>
-            <span className="text-xs font-medium text-gray-500">Active Hives</span>
+            <span className="text-[10px] sm:text-xs font-medium text-gray-500">Active Hives</span>
           </div>
-          <p className="text-3xl font-bold">{hives.length}</p>
+          <p className="text-2xl sm:text-3xl font-bold">{hives.length}</p>
           <div className="flex items-center gap-2 mt-2">
             <span className="text-xs text-green-600 font-medium">{healthyHives} healthy</span>
             {warningHives > 0 && <span className="text-xs text-yellow-600">· {warningHives} warning</span>}
@@ -74,36 +76,36 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
-              <span className="material-symbols-outlined text-[20px] text-green-600">monitor_heart</span>
+        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-sm">
+          <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-green-50 flex items-center justify-center">
+              <span className="material-symbols-outlined text-[18px] sm:text-[20px] text-green-600">monitor_heart</span>
             </div>
-            <span className="text-xs font-medium text-gray-500">Health Status</span>
+            <span className="text-[10px] sm:text-xs font-medium text-gray-500">Health Status</span>
           </div>
-          <p className="text-3xl font-bold">{Math.round((healthyHives / hives.length) * 100)}%</p>
+          <p className="text-2xl sm:text-3xl font-bold">{Math.round((healthyHives / hives.length) * 100)}%</p>
           <p className="text-xs text-gray-400 mt-2">Overall fleet health</p>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center">
-              <span className="material-symbols-outlined text-[20px] text-amber-600">scale</span>
+        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-sm">
+          <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-amber-50 flex items-center justify-center">
+              <span className="material-symbols-outlined text-[18px] sm:text-[20px] text-amber-600">scale</span>
             </div>
-            <span className="text-xs font-medium text-gray-500">Total Yield</span>
+            <span className="text-[10px] sm:text-xs font-medium text-gray-500">Total Yield</span>
           </div>
-          <p className="text-3xl font-bold">{totalYield.toFixed(1)} kg</p>
+          <p className="text-2xl sm:text-3xl font-bold">{totalYield.toFixed(1)} kg</p>
           <p className="text-xs text-gray-400 mt-2">From {harvests.filter((h) => h.status === "completed").length} harvests</p>
         </div>
 
-        <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center">
-              <span className="material-symbols-outlined text-[20px] text-emerald-600">payments</span>
+        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-sm">
+          <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 flex items-center justify-center">
+              <span className="material-symbols-outlined text-[18px] sm:text-[20px] text-emerald-600">payments</span>
             </div>
-            <span className="text-xs font-medium text-gray-500">Earnings</span>
+            <span className="text-[10px] sm:text-xs font-medium text-gray-500">Earnings</span>
           </div>
-          <p className="text-3xl font-bold">${totalEarnings.toFixed(0)}</p>
+          <p className="text-2xl sm:text-3xl font-bold">${totalEarnings.toFixed(0)}</p>
           <p className="text-xs text-gray-400 mt-2">Total revenue</p>
         </div>
       </div>
@@ -128,7 +130,7 @@ export default function DashboardPage() {
                   <p className="text-sm font-medium truncate">{hive.name}</p>
                   <p className="text-[10px] text-gray-400">{hive.location}</p>
                 </div>
-                <div className="flex items-center gap-4 text-xs text-gray-500">
+                <div className="hidden sm:flex items-center gap-4 text-xs text-gray-500">
                   <span title="Temperature">{hive.latestTemp}°C</span>
                   <span title="Humidity">{hive.latestHumidity}%</span>
                   <span title="Weight">{hive.latestWeight}kg</span>

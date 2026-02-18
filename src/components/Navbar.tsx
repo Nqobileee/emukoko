@@ -33,7 +33,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -67,7 +67,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/20 hover:bg-white/40 transition-colors shadow-sm"
+          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/20 hover:bg-white/40 transition-colors shadow-sm"
           aria-label="Toggle menu"
         >
           <span className="material-symbols-outlined text-[#181611]">
@@ -78,7 +78,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
+        <div className="fixed inset-0 z-40 lg:hidden">
           <div
             className="absolute inset-0 bg-black/20 backdrop-blur-sm"
             onClick={() => setMenuOpen(false)}

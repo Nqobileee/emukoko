@@ -26,12 +26,12 @@ export default function HivesListPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h1 className="text-2xl font-bold">My Hives</h1>
           <p className="text-sm text-gray-500 mt-1">Monitor and manage your Smart Hive fleet</p>
         </div>
-        <div className="flex items-center gap-2 text-xs">
+        <div className="flex items-center gap-3 text-xs">
           <span className="flex items-center gap-1"><span className={`w-2 h-2 rounded-full ${statusDot.healthy}`} /> Healthy</span>
           <span className="flex items-center gap-1"><span className={`w-2 h-2 rounded-full ${statusDot.warning}`} /> Warning</span>
           <span className="flex items-center gap-1"><span className={`w-2 h-2 rounded-full ${statusDot.critical}`} /> Critical</span>
@@ -93,11 +93,11 @@ export default function HivesListPage() {
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-xs text-gray-400 pt-3 border-t border-gray-50">
+            <div className="flex items-center justify-between gap-2 text-xs text-gray-400 pt-3 border-t border-gray-50 flex-wrap">
               <span className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${loanBadge[hive.loanStatus]}`}>
                 Loan: {hive.loanStatus}
               </span>
-              <span>Updated {timeAgo(hive.lastReading)}</span>
+              <span className="text-[10px] sm:text-xs">Updated {timeAgo(hive.lastReading)}</span>
               <span className="material-symbols-outlined text-[16px] text-gray-300 group-hover:text-primary transition-colors">
                 arrow_forward
               </span>

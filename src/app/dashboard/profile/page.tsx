@@ -84,11 +84,13 @@ export default function ProfilePage() {
 
       {/* Harvest History */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm">
-        <div className="p-5 pb-0">
+        <div className="p-4 sm:p-5 pb-0">
           <h2 className="font-bold text-base">Harvest History</h2>
           <p className="text-xs text-gray-500 mt-0.5">All your harvests with quality grades and payment records</p>
         </div>
-        <div className="p-5 overflow-x-auto">
+
+        {/* Desktop table — hidden on mobile */}
+        <div className="hidden md:block p-5 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="text-left text-xs text-gray-400 border-b border-gray-100">
@@ -125,6 +127,47 @@ export default function ProfilePage() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile cards — hidden on desktop */}
+        <div className="md:hidden p-4 space-y-3">
+          {harvests.map((harvest) => (
+            <div key={harvest.id} className="rounded-xl border border-gray-100 p-3 space-y-2">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="font-bold text-sm truncate">{harvest.hiveName}</h3>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${gradeColors[harvest.qualityGrade]}`}>
+                    {harvest.qualityGrade}
+                  </span>
+                  <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${statusBadge[harvest.status]}`}>
+                    {harvest.status}
+                  </span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Season</span>
+                  <span className="text-gray-700">{harvest.season}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Date</span>
+                  <span className="text-gray-700">{new Date(harvest.harvestedAt).toLocaleDateString()}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Sensor</span>
+                  <span className="text-gray-700">{harvest.weightSensor} kg</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-400">Delivered</span>
+                  <span className="text-gray-700">{harvest.weightDelivered} kg</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-gray-50">
+                <span className="text-[10px] text-gray-400">Payment</span>
+                <span className="font-bold text-sm">{harvest.payment > 0 ? `$${harvest.payment.toFixed(2)}` : "Pending"}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
